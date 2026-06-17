@@ -16,6 +16,7 @@ function onFormSubmit(e) {
 
 
 // googleフォームの回答を利用しやすい形式にフォーマット
+// e：googleフォームの回答内容
 function formatFormData(e) {
 
   // googleフォームの回答を取得
@@ -76,9 +77,9 @@ function formatFormData(e) {
 function buildFileName(data) {
 
   // 有給取得日数が1日の場合
-  // BW〇〇〇〇 田中太郎_mm月dd日_有給休暇申請書
+  // XX0001 山田太郎_mm月dd日_有給休暇申請書
   // 有給取得日数が複数日の場合
-  // BW〇〇〇〇 田中太郎_mm月dd日～mm月dd日_有給休暇申請書
+  // XX0001 山田太郎_mm月dd日～mm月dd日_有給休暇申請書
   if (data.period === 1) {
     return `${data.employeeId} ${data.name}_${data.startDate.m}月${data.startDate.d}日_${data.applyType}申請書`;
   } else {
@@ -89,13 +90,15 @@ function buildFileName(data) {
 // PDF生成
 function generatePDF(data, fileName) {
   
+  //「休暇届のテンプレート」のファイルオブジェクトを取得
   const templateFile = DriveApp.getFileById(TEMPLATE_FILE_ID);
-
+  // PDFを格納するフォルダのオブジェクトを取得
+  const folder = DriveApp.getFolderById(FOLDER_ID);
   //「休暇届のテンプレート」のコピーを生成
-  const copiedFile = templateFile.makeCopy(fileName, DriveApp.getFolderById(FOLDER_FILE_ID));
-  const copiedId = copiedFile.getId();
+  const copiedFile = templateFile.makeCopy(fileName, folder);
 
   // 生成したコピーにデータを挿入する
+  const copiedId = copiedFile.getId();
   const doc = DocumentApp.openById(copiedId);
   const body = doc.getBody();
 
@@ -130,7 +133,6 @@ function generatePDF(data, fileName) {
     body.replaceText(ph, ph === targetPlaceholder ? "✓" : "");
   });
 
-
   // 有給取得開始日
   body.replaceText("{{sm}}", data.startDate.m);
   body.replaceText("{{sd}}", data.startDate.d);
@@ -152,9 +154,8 @@ function generatePDF(data, fileName) {
 
   doc.saveAndClose();
 
+  // PDF形式で保存
   const pdfBlob = DriveApp.getFileById(copiedId).getAs("application/pdf");
-  const folder = DriveApp.getFolderById(FOLDER_ID);
-
   folder.createFile(pdfBlob).setName(fileName + ".pdf");
 }
 
