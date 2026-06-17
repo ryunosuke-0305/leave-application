@@ -88,16 +88,11 @@ function buildFileName(data) {
 
 // PDF生成
 function generatePDF(data, fileName) {
-
-  //「休暇届のテンプレート」のファイルID
-  const TEMPLATE_ID = "1YeJ6osmTqP3RyQXiH_1d74sufUvSEuYpkg0i0Dt53OI";
-  // 生成した休暇届を格納するフォルダのID
-  const FOLDER_ID = "1c1l-79vDlXHWNuY1txcSoNCTBPXdlnQL";
   
-  const templateFile = DriveApp.getFileById(TEMPLATE_ID);
+  const templateFile = DriveApp.getFileById(TEMPLATE_FILE_ID);
 
   //「休暇届のテンプレート」のコピーを生成
-  const copiedFile = templateFile.makeCopy(fileName, DriveApp.getFolderById(FOLDER_ID));
+  const copiedFile = templateFile.makeCopy(fileName, DriveApp.getFolderById(FOLDER_FILE_ID));
   const copiedId = copiedFile.getId();
 
   // 生成したコピーにデータを挿入する
@@ -167,9 +162,7 @@ function generatePDF(data, fileName) {
 // 電子印鑑を挿入
 function insertSeal(body) {
 
- // 電子印鑑のファイルID
-  const fileId = "1e18rRPrWQ1u-it5-kljbQ0fwi4LCSwo8"; 
-  const file = DriveApp.getFileById(fileId);
+  const file = DriveApp.getFileById(SEAL_FILE_ID);
   sealBlob = file.getBlob();
 
   const range = body.findText("{{seal}}");
