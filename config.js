@@ -6,4 +6,4 @@ const TEMPLATE_FILE_ID = "";
 const SEAL_FILE_ID = "";
 // 「休暇届」フォルダのID（作成した休暇届のPDFを格納するフォルダ）
 // https://drive.google.com/drive/u/0/folders/***********/
-const FOLDER_FILE_ID = "";
+const FOLDER_ID = "";
