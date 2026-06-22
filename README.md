@@ -31,7 +31,7 @@ Google Apps Script（GAS）を使用し、送信した Google フォームの回
 1. 以下の URL にアクセス  
 https://stamp.websozai.jp/index.php?color=EF454A&name=`自分の苗字`  
 
-2. 「生成」の右側にある苗字のリンクを押下
+2. 「生成」の右側にある苗字のリンクを押下  
 ![alt text](readme-images/image-7.png)  
 
 3. 保存した画像を Google ドライブの「休暇届け作成（GAS）」フォルダ内に配置し、 **「電子印鑑.png」** にリネーム
@@ -41,26 +41,26 @@ https://stamp.websozai.jp/index.php?color=EF454A&name=`自分の苗字`
 1. 次のフォーム URL にアクセス  
 https://docs.google.com/forms/d/1mczycrHb3aEpQaFRyxp2hxeoM54DWx-nzqTZ4lk0bJ8/copy
 
-2. 「コピーを作成」を押下
+2. 「コピーを作成」を押下  
 ![alt text](readme-images/image-2.png)
 
-3. 「公開」を押下
+3. 「公開」を押下  
 ![alt text](readme-images/image-3.png)
 
 4. 「休暇申請書（GAS）」フォルダ配下に保存し、 **「休暇届作成用googleフォーム」** にリネーム
 
 ### 4. 休暇届のテンプレートを作成
 
-1. 次のドキュメント URL にアクセス
-   https://docs.google.com/document/d/1YeJ6osmTqP3RyQXiH_1d74sufUvSEuYpkg0i0Dt53OI/copy
+1. 次のドキュメント URL にアクセス  
+https://docs.google.com/document/d/1YeJ6osmTqP3RyQXiH_1d74sufUvSEuYpkg0i0Dt53OI/copy
 
-2. 「コピーを作成」を押下
-![alt text](readme-images/image.png)
+2. 「コピーを作成」を押下  
+![alt text](readme-images/image.png)  
 「休暇申請書（GAS）」フォルダ配下に保存し、 **「休暇届のテンプレート」** にリネーム  
 
 ### 5. チェック
 
-1. 以下のフォルダ構成になっていればOK！
+1. 以下のフォルダ構成になっていればOK！  
 ![alt text](readme-images/image-4.png)
 
 ## GASスクリプト反映手順
@@ -116,9 +116,9 @@ https://drive.google.com/drive/u/0/folders/{フォルダID}/
 2. 以下の内容で保存  
 実行する関数：onFormtSubmit  
 イベントの種類を選択：フォーム送信時  
-「保存」を押下
+「保存」を押下  
 ![alt text](readme-images/image-17.png)
 
-> ※以下のエラーが出る場合、内容を確認の上「advanced」からアクセスを許可して下さい。
+> ※以下のエラーが出る場合、内容を確認の上「advanced」からアクセスを許可して下さい。  
 ![alt text](readme-images/image-18.png)
 
