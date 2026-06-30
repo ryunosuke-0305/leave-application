@@ -41,20 +41,28 @@ https://stamp.websozai.jp/index.php?color=EF454A&name=`自分の苗字`
 1. 次のフォーム URL にアクセス  
 https://docs.google.com/forms/d/1mczycrHb3aEpQaFRyxp2hxeoM54DWx-nzqTZ4lk0bJ8/copy
 
-2. 「コピーを作成」を押下  
+2. 「アクセス権限をリクエスト」を押下  
+※承認の為、お手数ですが松村までご一報ください。    
+<img width="581" height="326" alt="image" src="https://github.com/user-attachments/assets/41f669b2-7e5c-498f-a17b-89e135dde430" />  
+
+4. 「コピーを作成」を押下  
 ![alt text](readme-images/image-2.png)
 
-3. 「公開」を押下  
+5. 「公開」を押下  
 ![alt text](readme-images/image-3.png)
 
-4. 「休暇申請書（GAS）」フォルダ配下に保存し、 **「休暇届作成用googleフォーム」** にリネーム
+6. 「休暇申請書（GAS）」フォルダ配下に保存し、 **「休暇届作成用googleフォーム」** にリネーム
 
 ### 4. 休暇届のテンプレートを作成
 
 1. 次のドキュメント URL にアクセス  
 https://docs.google.com/document/d/1YeJ6osmTqP3RyQXiH_1d74sufUvSEuYpkg0i0Dt53OI/copy
 
-2. 「コピーを作成」を押下  
+2. 「閲覧者」を選択し、「アクセス権限をリクエスト」を押下  
+※承認の為、お手数ですが松村までご一報ください。  
+<img width="568" height="409" alt="image" src="https://github.com/user-attachments/assets/3f8bd53e-00c2-47a9-8fa1-47eb50e5ceef" />  
+
+4. 「コピーを作成」を押下  
 ![alt text](readme-images/image.png)  
 「休暇申請書（GAS）」フォルダ配下に保存し、 **「休暇届のテンプレート」** にリネーム  
 
