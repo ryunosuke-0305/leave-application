@@ -96,16 +96,16 @@ https://docs.google.com/document/d/{ファイルID}/edit
 2. `コード.gs` ファイルにファイルIDを追記  
 `const TEMPLATE_FILE_ID = "{ファイルID}"; `  
 
-3. 「電子印鑑.png」を開き、URL からファイルIDを取得  
+3. 「電子印鑑.png」を新規タブで開き、URL からファイルIDを取得  
 https://docs.google.com/document/d/{ファイルID}/edit  
 
-4. `コード.gs` ファイルにファイルIDを追記  
+5. `コード.gs` ファイルにファイルIDを追記  
 `const SEAL_FILE_ID = "{ファイルID}"; `  
 
-5. 「休暇届」フォルダを開き、URL からフォルダIDを取得  
+6. 「休暇届」フォルダを開き、URL からフォルダIDを取得  
 https://drive.google.com/drive/u/0/folders/{フォルダID}/  
 
-6. `コード.gs` ファイルにフォルダIDを追記  
+7. `コード.gs` ファイルにフォルダIDを追記  
 `const FOLDER_ID = "{フォルダID}"; ` 
 
 ### 4. トリガーの設定
@@ -121,4 +121,21 @@ https://drive.google.com/drive/u/0/folders/{フォルダID}/
 
 > ※以下のエラーが出る場合、内容を確認の上「advanced」からアクセスを許可して下さい。  
 ![alt text](readme-images/image-18.png)
+
+## PDF作成実行手順
+
+### 1. googleフォームのURLを取得
+
+1. 「休暇届作成用googleフォーム」を開き、右上の三点リーダーから「フォームに事前入力する」を押下  
+<img width="859" height="467" alt="image" src="https://github.com/user-attachments/assets/f95df7f3-b50d-4a90-862a-21f4310b2e8f" />  
+
+2. 事前に入力しておきたい項目の値を設定し、「リンクを取得」を押下  
+毎回入力するのが面倒な項目（社員番号や氏名）は事前に値を入力しておくと楽。  
+<img width="620" height="379" alt="image" src="https://github.com/user-attachments/assets/79aa01ce-b6b7-44a8-9986-c70f4a27b51f" />  
+<img width="590" height="336" alt="image" src="https://github.com/user-attachments/assets/094acca0-ee71-40d2-85aa-3a866907060b" />
+
+3. 取得したURLからフォームを送信することで、休暇申請書のPDFが生成される。  
+<img width="494" height="259" alt="image" src="https://github.com/user-attachments/assets/eeb27ae5-924b-4f25-b58d-ba8b1b19b902" />
+
+
 
