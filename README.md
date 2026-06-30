@@ -98,22 +98,18 @@ https://github.com/ryunosuke-0305/leave-application/blob/feature/%E3%82%B3%E3%83
 
 ### 3. 各種ファイル ID を設定
 
-1. 「休暇届のテンプレート」を開き、URL からファイルIDを取得  
-https://docs.google.com/document/d/{ファイルID}/edit  
-
-2. `コード.gs` ファイルにファイルIDを追記  
+1. 「休暇届のテンプレート」を開き、URL のファイルIDを`コード.gs` ファイルに追記   
+https://docs.google.com/document/d/{ファイルID}/edit    
 `const TEMPLATE_FILE_ID = "{ファイルID}"; `  
 
-3. 「電子印鑑.png」を新規タブで開き、URL からファイルIDを取得  
+2. 「電子印鑑.png」を新規タブで開き、URL のファイルIDを`コード.gs` ファイルに追記  
 https://docs.google.com/document/d/{ファイルID}/edit  
-
-5. `コード.gs` ファイルにファイルIDを追記  
 `const SEAL_FILE_ID = "{ファイルID}"; `  
+※新規タブで開かないとファイルIDを取得できないので注意  
+![alt text](image.png)  
 
-6. 「休暇届」フォルダを開き、URL からフォルダIDを取得  
+3. 「休暇届」フォルダを開き、URL のフォルダIDを`コード.gs` ファイルに追記  
 https://drive.google.com/drive/u/0/folders/{フォルダID}/  
-
-7. `コード.gs` ファイルにフォルダIDを追記  
 `const FOLDER_ID = "{フォルダID}"; ` 
 
 ### 4. トリガーの設定
