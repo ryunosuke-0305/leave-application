@@ -78,7 +78,7 @@ function test_case_apply_type_keicho() {
 }
 
 
-// 正常系テストケース（有給取得日数：1日）
+// 正常系テストケース（休暇取得日数：1日）
 function test_case_period_1day() {
   const e = { 
     namedValues: {
@@ -98,7 +98,7 @@ function test_case_period_1day() {
 }
 
 
-// 正常系テストケース（有給取得日数：2日）
+// 正常系テストケース（休暇取得日数：2日）
 function test_case_period_2day() {
   const e = { 
     namedValues: {
@@ -110,6 +110,26 @@ function test_case_period_2day() {
       "適用区分": ["有給休暇"],
       "期間（休暇取得開始日）": ["2026-07-01"],
       "期間（休暇取得終了日）": ["2026-07-02"],
+      "理由": ["私用の為"],
+
+    }
+  };
+  onFormSubmit(e);
+}
+
+
+// 正常系テストケース（休暇取得月、休暇取得日が二桁）
+function test_case_two_digit() {
+  const e = { 
+    namedValues: {
+      "タイムスタンプ": ["2026/06/16 13:24:05"],
+      "所属": ["〇〇事業部"],
+      "役職": ["なし"],
+      "社員番号": ["XX0001"],
+      "氏名": ["山田太郎"],
+      "適用区分": ["有給休暇"],
+      "期間（休暇取得開始日）": ["2026-12-12"],
+      "期間（休暇取得終了日）": ["2026-12-12"],
       "理由": ["私用の為"],
 
     }
